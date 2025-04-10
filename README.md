@@ -82,9 +82,8 @@ It's especially helpful for layout, typography, accessibility, and consistency!
 
 **Eric Anderson**
 Professor, Media Communications & Technology <br>
-University of Cincinnati Blue Ash College
-
-🔗 [GitHub @prof-anderson-uc](https://github.com/prof-anderson-uc)
+University of Cincinnati - UC Blue Ash College <br>
+GitHub: [@prof-anderson-uc](https://github.com/prof-anderson-uc)
 
 
 Eric teaches web design, front-end development, and digital media production. His focus is on helping students build real-world skills with clean, accessible, standards-based code. The reset stylesheet and UCBA Stylekit are part of his effort to create practical, educational tools for students at all levels.
