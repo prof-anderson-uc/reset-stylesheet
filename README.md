@@ -81,7 +81,7 @@ It's especially helpful for layout, typography, accessibility, and consistency!
 ## 👨‍🏫 About the Author
 
 **Eric Anderson**
-Professor, Media Communications & Technology
+Professor, Media Communications & Technology <br>
 University of Cincinnati Blue Ash College
 
 🔗 [GitHub @prof-anderson-uc](https://github.com/prof-anderson-uc)
