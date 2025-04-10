@@ -89,8 +89,7 @@ GitHub: [@prof-anderson-uc](https://github.com/prof-anderson-uc)
 Eric teaches web design, front-end development, and digital media production. His focus is on helping students build real-world skills with clean, accessible, standards-based code. The reset stylesheet and UCBA Stylekit are part of his effort to create practical, educational tools for students at all levels.
 
 ## 📄 License
-This reset is open-source and free to use under the [MIT License](https://opensource.org/licenses/MIT).
-
+This reset is open-source and free to use under the [MIT License](https://opensource.org/licenses/MIT). <br>
 Modify it, share it, and adapt it to your own needs — especially in a classroom or learning environment!
 
 ---
