@@ -1,6 +1,6 @@
-# UCBA Stylekit Reset CSS
+# Reset CSS 
 
-A modern reset stylesheet designed for student learning, accessibility, and real-world web development. Created and maintained by Professor Eric Anderson at the University of Cincinnati.
+A modern reset stylesheet designed for student learning, accessibility, and real-world web development.
 
 ## 🎯 What is This?
 
