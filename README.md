@@ -34,10 +34,10 @@ Different browsers apply their own default styles to elements like headings, lis
    ```
 
 3. **Place your custom styles AFTER the reset:**<br>
-This ensures your styles build on top of a clean foundation.
+This ensures **your** styles build on top of a clean foundation.
    ```html
    <link rel="stylesheet" href="reset.css">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="example.css">
    ```
 
 4. **Use it for every project you build in my courses**<br>
