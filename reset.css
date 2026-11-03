@@ -7,6 +7,13 @@
   bold headings, and so on). This file removes most of them so
   every project starts from the same blank slate. Link it BEFORE
   your own stylesheet so your styles build on top of it.
+
+  A note on units: this file uses both rem and em.
+  - rem is based on the page's root font size (usually 16px),
+    so 1rem is the same size everywhere. Good for font sizes.
+  - em is based on the font size of the element itself, so
+    spacing in em grows and shrinks along with its text.
+    Good for margins and padding around text.
 */
 
 
