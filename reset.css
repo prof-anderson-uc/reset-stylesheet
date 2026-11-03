@@ -38,9 +38,18 @@ time, mark, audio, video {
 
 /* Use border-box sizing for every element.
    Padding and borders are included inside an element's width,
-   so a 300px-wide box stays 300px wide when you add padding. */
+   so a 300px-wide box stays 300px wide when you add padding.
+   Learn more: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing */
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+/* Stop phones (especially iPhones) from enlarging text on their own
+   when the phone is turned sideways. Your font sizes stay the same.
+   Learn more: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-size-adjust */
+html {
+  -webkit-text-size-adjust: 100%; /* Safari still needs this version */
+  text-size-adjust: 100%;
 }
 
 /* Set a readable starting size and line spacing for body text */
@@ -59,8 +68,16 @@ p {
   display: none;
 }
 
+/* Images sit on the text baseline like letters do, which leaves a
+   small gap underneath them (room for letters like "g" and "y").
+   Lining them up with the middle of the text removes that gap.
+   Learn more: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/vertical-align */
+img, svg, video {
+  vertical-align: middle;
+}
 
-/* TEXT MEANING
+
+/* TEXT
 ------------------------------ */
 /* The reset above makes these tags look like plain text.
    They carry meaning (importance, emphasis, titles of works),
@@ -75,6 +92,26 @@ i,
 cite,
 dfn {
   font-style: italic;
+}
+
+/* Break up long words and web addresses so they wrap to the next
+   line instead of stretching the page wider than a phone screen.
+   Learn more: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow-wrap */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Wrap text more evenly. "balance" splits headings into lines of
+   similar length. "pretty" avoids leaving a single word alone on the
+   last line of a paragraph. Browsers that don't support these
+   simply wrap text the usual way.
+   Learn more: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-wrap */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 /* Show a dotted underline and a question-mark cursor on
@@ -123,9 +160,12 @@ mark {
   background: #ff0;
 }
 
-/* Remove default quotation marks from <blockquote> and <q> */
-blockquote, q {
-  quotes: none;
+/* Give block quotes a simple gray bar on the left so they stand
+   out from regular paragraphs. Replace this with your own design. */
+blockquote {
+  border-left: 4px solid #888;
+  padding-left: 1em;
+  margin-bottom: 1em;
 }
 
 
@@ -158,8 +198,11 @@ legend {
   font-weight: bold;
 }
 
-/* Form controls use the page's font instead of the browser's */
+/* Form controls use the page's font instead of the browser's,
+   and lose the small margin some browsers (like Safari) add.
+   Their borders and padding stay, so they still look like fields. */
 button, input, select, textarea {
+  margin: 0;
   font: inherit;
 }
 
@@ -197,7 +240,8 @@ hr {
 /*  PRINT STYLES
 ------------------------------ */
 /* These rules only apply when someone prints the page or saves it
-   as a PDF. They save ink and keep the page readable on paper. */
+   as a PDF. They save ink and keep the page readable on paper.
+   Learn more: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Printing */
 @media print {
 
   /* Black text on a white background, no shadows */

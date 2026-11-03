@@ -2,7 +2,7 @@
 
 A modern reset stylesheet designed for student learning, accessibility, and real-world web development.
 
-## 🎯 What is This?
+## What is This?
 
 This `reset.css` file is part of the UCBA Stylekit — a lightweight, educational CSS toolkit designed for students learning modern HTML and CSS. It builds on the foundation of [Eric Meyer's Reset v2.0](https://meyerweb.com/eric/tools/css/reset/) and includes modern enhancements for accessibility, responsive design, and clarity.
 
@@ -14,7 +14,7 @@ This reset stylesheet:
 - Includes useful resets for text, tables, form elements, and print
 - Is heavily commented to support learning and comprehension
 
-## 💡 Why Use It?
+## Why Use It?
 
 Different browsers apply their own default styles to elements like headings, lists, and forms. These inconsistencies can cause frustration for beginners and professionals alike. This reset:
 
@@ -23,7 +23,7 @@ Different browsers apply their own default styles to elements like headings, lis
 - Encourages clean, accessible markup and styling habits
 - Helps students focus on *what they build*, not how browsers render it by default
 
-## 📚 How to Use
+## How to Use
 
 1. **Add the CSS file to your project.**  
    Download `reset.css` or copy it into your project directory.
@@ -52,7 +52,15 @@ It's especially helpful for layout, typography, accessibility, and consistency!
 
 - Bold and italic kept for meaningful tags (`<strong>`, `<em>`, `<cite>`, etc.)
 
-- Dotted underline and question-mark cursor for `<abbr>`
+- Dotted underline and question-mark cursor for `<abbr>`; quotation marks kept for `<q>`
+
+- A simple gray bar on the left of `<blockquote>` so quotes stand out (replace it with your own design)
+
+- Long words and web addresses wrap instead of stretching the page; headings and paragraphs wrap more evenly
+
+- No mystery gap underneath images
+
+- Text doesn't enlarge itself when a phone is turned sideways
 
 - Form field consistency across browsers
 
@@ -60,7 +68,7 @@ It's especially helpful for layout, typography, accessibility, and consistency!
 
 - Print styles for better output in PDFs and printed pages
 
-## ✋ What It Leaves for You
+## What It Leaves for You
 
 Some things are left out on purpose, so you practice writing them yourself:
 
@@ -71,7 +79,7 @@ Some things are left out on purpose, so you practice writing them yourself:
 - **Images aren't automatically sized to fit.** Add `max-width: 100%;` to your images so they don't overflow on small screens.
 
 
-## 🧠 Conventions Used
+## Conventions Used
 
 - **Font Inheritance**: All elements inherit the font from the body  
 
@@ -86,7 +94,7 @@ Some things are left out on purpose, so you practice writing them yourself:
 - **Browser Support**: Written for current browsers; old Internet Explorer workarounds have been removed  
 
 
-## 👨‍🏫 About the Author
+## About the Author
 
 **Eric Anderson**
 Professor, Media Communications & Technology <br>
@@ -96,7 +104,7 @@ GitHub: [@prof-anderson-uc](https://github.com/prof-anderson-uc)
 
 Eric teaches web design, front-end development, and digital media production. His focus is on helping students build real-world skills with clean, accessible, standards-based code. The reset stylesheet and UCBA Stylekit are part of his effort to create practical, educational tools for students at all levels.
 
-## 📄 License
+## License
 This reset is open-source and free to use under the [MIT License](https://opensource.org/licenses/MIT). <br>
 Modify it, share it, and adapt it to your own needs — especially in a classroom or learning environment!
 
