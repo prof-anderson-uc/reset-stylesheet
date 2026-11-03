@@ -50,6 +50,8 @@ It's especially helpful for layout, typography, accessibility, and consistency!
 
 - Normalized font styles, line height, and heading behavior
 
+- Headings stay bold but start at the same size as body text, so you choose each heading's size
+
 - Bold and italic kept for meaningful tags (`<strong>`, `<em>`, `<cite>`, etc.)
 
 - Dotted underline and question-mark cursor for `<abbr>`; quotation marks kept for `<q>`
@@ -85,7 +87,7 @@ Some things are left out on purpose, so you practice writing them yourself:
 
 - **Box Sizing**: Uses `box-sizing: border-box` for layout sanity  
 
-- **Line Height**: Slightly increased for better readability (`line-height: 1.3`)  
+- **Line Height**: Slightly increased for better readability (`line-height: 1.2`)  
 
 - **Commenting**: Clear, sectioned comments guide students through the logic  
 

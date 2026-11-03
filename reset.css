@@ -62,7 +62,7 @@ html {
 /* Set a readable starting size and line spacing for body text */
 body {
   font-size: 1rem;
-  line-height: 1.3; /* Adds a little room between lines of text */
+  line-height: 1.2; /* Adds a little room between lines of text */
 }
 
 /* Add a space below paragraphs */
@@ -91,6 +91,13 @@ img, svg, video {
    so we give back their usual bold and italic styles. */
 strong,
 b {
+  font-weight: bold;
+}
+
+/* Headings stay bold so they still look like headings.
+   They all start at the same size as body text, so setting
+   each heading's font-size is up to you. */
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
