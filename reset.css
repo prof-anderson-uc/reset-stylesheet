@@ -1,30 +1,49 @@
 /*
   UCBA Stylekit Reset CSS
-  Based on Eric Meyer's Reset v2.0 + Modern Enhancements
+  Based on Eric Meyer's Reset v2.0, updated for modern browsers
   Adjusted for clarity, accessibility, and student learning
+
+  Every browser adds its own default styles (margins, font sizes,
+  bold headings, and so on). This file removes most of them so
+  every project starts from the same blank slate. Link it BEFORE
+  your own stylesheet so your styles build on top of it.
 */
 
 
-/* MARGINS, PADDING & FONT SIZE 
+/* MARGINS, PADDING & FONTS
 ------------------------------ */
-/* Reset default styles for nearly all HTML elements
-   Ensures a consistent baseline across all browsers */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+/* Remove default spacing, borders, and text sizes from nearly
+   every element. "font: inherit" means headings, bold text, and
+   so on all start out looking like plain body text. You decide
+   how they should look in your own stylesheet. */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strong, sub, sup, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%; /* remove browser-default text sizes */
-  font: inherit;     /* inherit font family from body */
+  font: inherit; /* inherit font family, size, and weight from the parent */
   vertical-align: baseline;
 }
 
-/* Ensure older browsers display HTML5 elements as block */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-  display: block;
+/* Use border-box sizing for every element.
+   Padding and borders are included inside an element's width,
+   so a 300px-wide box stays 300px wide when you add padding. */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* Improve line height for default body copy */
+/* Set a readable starting size and line spacing for body text */
 body {
   font-size: 1rem;
   line-height: 1.3; /* Adds a little room between lines of text */
@@ -35,14 +54,83 @@ p {
   margin-bottom: 1em;
 }
 
-/* Hide elements with [hidden] attribute (HTML5 spec) */
+/* Hide elements with the [hidden] attribute */
 [hidden] {
   display: none;
 }
 
 
-/*  TABLES 
-------------------------------------------- */
+/* TEXT MEANING
+------------------------------ */
+/* The reset above makes these tags look like plain text.
+   They carry meaning (importance, emphasis, titles of works),
+   so we give back their usual bold and italic styles. */
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i,
+cite,
+dfn {
+  font-style: italic;
+}
+
+/* Show a dotted underline and a question-mark cursor on
+   abbreviations, a hint that hovering reveals the full term */
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+/* Monospace font for code-related tags.
+   ("monospace, serif" keeps browsers from shrinking code text.) */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+}
+
+/* Wrap long lines in <pre> tags instead of running off the page */
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+/* Resize small text */
+small {
+  font-size: 80%;
+}
+
+/* Keep superscript and subscript from changing line spacing */
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Style highlighted text */
+mark {
+  color: #000;
+  background: #ff0;
+}
+
+/* Remove default quotation marks from <blockquote> and <q> */
+blockquote, q {
+  quotes: none;
+}
+
+
+/*  TABLES
+------------------------------ */
 /* Bold captions and headers, left-align text */
 caption,
 th {
@@ -57,7 +145,7 @@ table {
 }
 
 
-/* FORMS
+/* FORMS & BUTTONS
 ------------------------------ */
 /* Ensure visible form grouping and spacing */
 fieldset {
@@ -70,108 +158,25 @@ legend {
   font-weight: bold;
 }
 
-/* Inherit font styles for form inputs */
+/* Form controls use the page's font instead of the browser's */
 button, input, select, textarea {
   font: inherit;
 }
 
-
-
-
-/* IMAGE STYLES
------------------------------- */
-/* Remove image borders (common in IE/old HTML) */
-img {
-  border: 0;
+/* Show a hand cursor on buttons, like links */
+button {
+  cursor: pointer;
 }
-
-/* Prevents weird spacing in old browsers */
-a img {
-   border: 0;
- }
-
- /* Utility class to add block-level display to images */
-.img-block {
-   display: block;
- }
- 
-
 
 
 /* MISCELLANEOUS
 ------------------------------ */
-/* Show "help cursor" when hovering over abbreviations */
-abbr[title] {
-   cursor: help;
- }
-
-/* Strike-through for <del> text */
-del {
-  text-decoration: line-through;
-}
-
-/* Remove default quotation marks */
-blockquote, q {
-  quotes: none;
-}
-
-/* Clear quote characters manually */
-blockquote::before, blockquote::after,
-q::before, q::after {
-  content: '';
-  content: none;
-}
-
-/* Italicize definitions */
-dfn {
-  font-style: italic;
-}
-
-/* Monospace font for code-related tags */
-code, kbd, pre, samp {
-  font-family: monospace, serif;
-}
-
-/* Wrap long lines in <pre> tags */
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-wrap: break-word; /* Break long strings if needed to avoid overflow */
-}
-
-/* Resize small text */
-small {
-  font-size: 80%;
-}
-
-/* Proper sub/sup positioning */
-sub, sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -.5em;
-}
-
-sub {
-  bottom: -.25em;
-}
-
-/* Style highlight marker */
-mark {
-  color: #000;
-  background: #ff0;
-}
-
 /* Pointer cursor for <summary> elements */
 details summary {
   cursor: pointer;
 }
 
-/* Ensure inline layout for elements inside <summary> */
+/* Keep elements inside <summary> on the same line as the arrow */
 details summary > * {
   display: inline;
 }
@@ -181,53 +186,29 @@ details p:last-of-type {
   margin-bottom: 0;
 }
 
+/* Simple light gray divider line */
 hr {
-   border: none;
-   border-top: 1px solid #ccc;
-   margin: 1em 0;
- }
- 
- button {
-   cursor: pointer; /* Makes buttons show a hand cursor like links */
- }
-
-
-/* MODERN ENHANCEMENTS
------------------------------- */
-/* Applies box-sizing to all elements and their pseudo-elements */
-/* Use border-box for all layout calculations */
-*, *::before, *::after {
-  box-sizing: border-box; 
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
 }
-
-/* Prevent media from overflowing their containers */
-img, picture, video, canvas, svg {
-  max-width: 100%; /* Scales down to fit container */
-  height: auto; /* Preserves aspect ratio */
-}
-
-/* Reduce animation for users with motion sensitivity */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
 
 
 /*  PRINT STYLES
 ------------------------------ */
-
+/* These rules only apply when someone prints the page or saves it
+   as a PDF. They save ink and keep the page readable on paper. */
 @media print {
-  *, *:before, *:after {
+
+  /* Black text on a white background, no shadows */
+  *, *::before, *::after {
     color: #000 !important;
-    text-shadow: none !important;
     background: transparent !important;
-    -webkit-box-shadow: none !important;
+    text-shadow: none !important;
     box-shadow: none !important;
   }
 
+  /* Links can't be clicked on paper, so print the web address after each link */
   a, a:visited {
     text-decoration: underline;
   }
@@ -236,71 +217,49 @@ img, picture, video, canvas, svg {
     content: " (" attr(href) ")";
   }
 
+  /* Skip addresses for links that point within the same page */
+  a[href^="#"]::after {
+    content: "";
+  }
+
+  /* Print the full term after each abbreviation */
   abbr[title]::after {
     content: " (" attr(title) ")";
   }
 
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
+  /* Hide the navigation menu, which isn't useful on paper */
+  nav {
+    display: none;
+  }
+
+  /* Keep these from splitting across two pages */
+  pre, blockquote, tr, img {
+    break-inside: avoid;
   }
 
   pre, blockquote {
     border: 1px solid #999;
-    page-break-inside: avoid;
   }
 
+  /* Repeat table headings at the top of each printed page */
   thead {
     display: table-header-group;
   }
 
-  tr, img {
-    page-break-inside: avoid;
-  }
-
+  /* Keep images inside the page margins */
   img {
     max-width: 100% !important;
+  }
+
+  /* Avoid leaving a heading alone at the bottom of a page,
+     or one or two stray lines at the top or bottom of a page */
+  h2, h3 {
+    break-after: avoid;
   }
 
   p, h2, h3 {
     orphans: 3;
     widows: 3;
-  }
-
-  h2, h3 {
-    page-break-after: avoid;
-  }
-
-  select {
-    background: #fff !important;
-  }
-
-  nav,
-  .navbar {
-    display: none;
-  }
-
-  .btn > .caret,
-  .dropup > .btn > .caret {
-    border-top-color: #000 !important;
-  }
-
-  .label {
-    border: 1px solid #000;
-  }
-
-  .table {
-    border-collapse: collapse !important;
-  }
-
-  .table td,
-  .table th {
-    background-color: #fff !important;
-  }
-
-  .table-bordered th,
-  .table-bordered td {
-    border: 1px solid #ddd !important;
   }
 }
 
@@ -308,5 +267,5 @@ img, picture, video, canvas, svg {
   Created by Professor Eric Anderson
   University of Cincinnati
   https://github.com/prof-anderson-uc
-  Last updated: April 10, 2025
+  Last updated: November 3, 2026
 */

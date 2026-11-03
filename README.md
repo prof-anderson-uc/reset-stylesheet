@@ -10,8 +10,8 @@ This reset stylesheet:
 
 - Normalizes default styles across browsers
 - Provides a consistent baseline for margin, padding, and typography
-- Adds accessibility features (focus outlines, `prefers-reduced-motion`)
-- Includes useful resets for media, form elements, HTML5 tags, and print
+- Keeps the browser's keyboard focus outlines visible
+- Includes useful resets for text, tables, form elements, and print
 - Is heavily commented to support learning and comprehension
 
 ## 💡 Why Use It?
@@ -50,17 +50,25 @@ It's especially helpful for layout, typography, accessibility, and consistency!
 
 - Normalized font styles, line height, and heading behavior
 
+- Bold and italic kept for meaningful tags (`<strong>`, `<em>`, `<cite>`, etc.)
+
+- Dotted underline and question-mark cursor for `<abbr>`
+
 - Form field consistency across browsers
 
 - Table and caption formatting
 
-- Semantic element support (e.g., `<section>`, `<figure>`, `<details>`)
-
 - Print styles for better output in PDFs and printed pages
 
-- Accessibility-minded features like visible :focus outlines
+## ✋ What It Leaves for You
 
-- Utility class: `.img-block` for image layout control
+Some things are left out on purpose, so you practice writing them yourself:
+
+- **Navigation lists keep their bullets.** Remove them in your own stylesheet with `list-style: none;`.
+
+- **Lists have no left padding.** Bullets can sit outside the edge of their container until you add padding or margin.
+
+- **Images aren't automatically sized to fit.** Add `max-width: 100%;` to your images so they don't overflow on small screens.
 
 
 ## 🧠 Conventions Used
@@ -73,9 +81,9 @@ It's especially helpful for layout, typography, accessibility, and consistency!
 
 - **Commenting**: Clear, sectioned comments guide students through the logic  
 
-- **Accessibility**: Includes visible focus indicators and media query for reduced motion  
+- **Accessibility**: Never removes the browser's focus outlines, so keyboard users can always see where they are  
 
-- **Browser Support**: Supports modern browsers while cleaning up quirks from older ones  
+- **Browser Support**: Written for current browsers; old Internet Explorer workarounds have been removed  
 
 
 ## 👨‍🏫 About the Author
